@@ -11,3 +11,6 @@ inputs:
 runs:
   using: "node20"
   main: "dist/index.js"
+permissions:
+  # Needed to delete caches
+  actions: write
