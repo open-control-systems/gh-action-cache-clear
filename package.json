@@ -1,6 +1,6 @@
 {
   "name": "gh-action-cache-clear",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "GitHub action to clear cache based on a pattern",
   "main": "dist/index.js",
   "scripts": {
