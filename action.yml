@@ -10,4 +10,4 @@ inputs:
     default: "${{ github.token }}"
 runs:
   using: "node20"
-  main: "script.js"
+  main: "dist/script.js"
