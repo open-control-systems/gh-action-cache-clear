@@ -1,0 +1,13 @@
+name: "Clear Cache by Pattern"
+description: "Clear GitHub Actions caches that match a specified key pattern."
+inputs:
+  PATTERN:
+    description: "Regex pattern to match cache keys for deletion"
+    required: true
+  GITHUB_TOKEN:
+    description: "GitHub token for authentication"
+    required: true
+    default: "${{ github.token }}"
+runs:
+  using: "node16"
+  main: "script.js"
