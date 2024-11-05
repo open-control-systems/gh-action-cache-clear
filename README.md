@@ -1,3 +1,5 @@
+[![build](https://github.com/open-control-systems/gh-action-cache-clear/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/open-control-systems/gh-action-cache-clear/actions/workflows/build.yml)
+
 ## Introduction
 
 This GitHub Action deletes cache entries based on a specified pattern. Useful for managing cache in CI/CD pipelines.
