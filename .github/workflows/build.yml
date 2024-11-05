@@ -1,0 +1,33 @@
+name: build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Action
+        run: |
+          npm install
+          npm run build
+
+          if [ -n "$(git status --porcelain dist/index.js)" ]; then
+            echo "dist/index.js has uncommitted changes. Please run 'npm run build' and commit the updated file."
+            exit 1
+          else
+            echo "dist/index.js is up-to-date."
+          fi
